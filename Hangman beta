@@ -1,0 +1,70 @@
+#its not done or even close to done this was just me trying to make hangman options i still need to do the gui and stuff 
+
+import string                                                               
+import os                                                                   # Used for clearing the term window
+import time                                                                 # Used for 5 second buffer at the end of the game
+import random                                                               # To pick random word from list
+from tkinter import *                                                       # GUI
+import tkinter as tk                                                        # GUI
+from tkinter import messagebox
+import tkinter, tkinter.messagebox,random
+
+question1 = input("Do you want to play hangman?")
+print('Do you want to play hangman?: ' + question1)
+if question1 == 'yes':
+    question2 = input("What topic do you want? (4 topics, cars, levels, food and animals") 
+    print('What topic do you want? (4 topics, cars, levels, food and animals: ' + question2)
+
+
+    # TO-DO MAKE A BUTTON SO YOU CAN SELECT ONE OF THE TOPICS 
+    
+
+
+
+
+    #this is levels so you choose the level you want if you want to play level
+
+    if question2.lower() == 'levels':
+        levelpicker = input("What level do you want easy medium or hard?")
+        print("What level do you want easy medium or hard?: " + levelpicker)
+        if levelpicker.lower() == 'easy':
+            easywords = random.choice(['dog','happy', 'dance', 'clap', 'rain','cloud', 'apple', 'orange', 'mango', 'carrot'])
+            print(easywords)
+        elif levelpicker.lower() == 'medium':
+            mediumwords = random.choice(['kyak','vodka', 'wizard', 'wave', 'walkway', 'wheezy', 'witchcraft', 'bear', 'gold', 'golf', 'game', 'name', 'tame', 'flame', 'contain', 'maintain', 'support', 'attach', 'complain', 'explain', 'dancing', 'clapping', 'multiplication', 'addition', 'time', 'neutron', 'proton', 'atom', 'electron'])
+            print(mediumwords)
+        elif levelpicker.lower() == 'hard':
+            hardwords = random.choice(['jazz', 'picklock','jazzy', 'fuzz', 'python', 'jinx', 'wax', 'funny', 'huge', 'oaks', 'quid', 'quip', 'rump', 'yoke', 'rump', 'yoke', 'muff', 'huff', 'tough', 'through', 'though', 'cough', 'electronic'])
+            print(hardwords)
+
+
+
+
+
+            # this is car option has cars and the others have the other topic 
+            
+    elif question2.lower() == 'cars' or question2.lower() == 'car':
+        carlist = random.choice(['Aston Martin', 'Bently', 'BMW', 'Bugati', 'Cadillac', 'Chevrolet', 'Dodge', 'Ford', 'GMC', 'Chrysler', 'Hennessy', 'Mclaren', 'Maserati', 'mini', 'lincoln', 'Land rover', 'Lamborghini','Lada', 'Kia', 'jeep', 'Jaguar', 'Hyundai', 'Nissan', 'Peugeot', 'Porsche', 'Renault', 'Rolls Royce', 'Seat', 'Saab', 'Skoda', 'Tesla', 'Vauxhall', 'Volkswagon'])
+        print(carlist)
+
+
+
+        #food topic
+    elif question2.lower() == 'food':
+        food = random.choice(['takoyaki', 'rice', 'ramen', 'pie', 'pesto', 'spaghetti', 'lasagna', 'dim sum', 'fried rice', 'wonton', 'croissant', 'pasta', 'spring roll', 'naan', 'eggroll'])
+        print(food)
+
+
+
+
+         animal topic
+    elif question2.lower() == 'animals' or question2.lower() == 'animal':
+        animals = random.choice(['eagle', 'dog', 'horse', 'monkey', 'elephant', 'donkey', 'bird', 'swan', 'lion', 'cheetah', 'mountain lion', 'cockatoo', 'turtle', 'shark', 'fish', 'ant', 'fire ant', 'lizard', 'snake', 'bear', 'emu', 'kangaroo', 'leech', 'spider', 'frog', 'ladybug', 'whale', 'peacock', 'scorpion', 'goldfish'])
+        print(animals)
+
+
+
+
+#if they dont wanna play 
+else:
+    print("okay bye")
